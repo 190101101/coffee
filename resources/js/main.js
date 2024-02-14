@@ -1,20 +1,12 @@
 const container = document.querySelector(".container");
-const row = document.querySelector(".row");
+const coffe = document.querySelector(".coffe");
 const spinner = document.querySelector(".spinner-border");
-
-// console.log(element.image);
-// console.log(element.title);
-// console.log(element.description);
-// console.log(element.image);
-// console.log(element.ingredients[0]);
-// console.log(element.image);
 
 (async () => {
   const response = await fetch(`https://api.sampleapis.com/coffee/hot`);
   const data = await response.json();
   data.map((element) => {
-    console.log(element);
-    row.innerHTML += `
+    coffe.innerHTML += `
     <div class="col-sm-6 col-md-6 col-lg-6">
       <div class="card mb-3" style="max-width: 540px">
         <div class="row no-gutters">
